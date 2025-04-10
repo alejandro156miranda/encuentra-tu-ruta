@@ -1,7 +1,7 @@
 // backend/server.js
 require('dotenv').config();
 const express = require('express');
-const cors = require('cors');
+
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
@@ -18,7 +18,8 @@ const allowedOrigins = ['https://springgreen-eland-179690.hostingersite.com'];
 app.use(cors({
     origin: allowedOrigins,
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    allowedHeaders: ['Content-Type', 'Authorization']
+    allowedHeaders: ['Content-Type', 'Authorization'],
+    credentials: true // 👈 Agrega esta línea
 }));
 app.use(express.json());
 
