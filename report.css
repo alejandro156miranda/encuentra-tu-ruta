@@ -1,0 +1,442 @@
+/* report.css */
+
+
+/* =============================== */
+
+
+/* ===== Variables y Reseteos ===== */
+
+
+/* =============================== */
+
+:root {
+    --yovoy-main: #3C1578;
+    --yovoy-secondary: #00B2A9;
+    --yovoy-yellow: #F7C500;
+    --yovoy-orange: #F34C36;
+    --yovoy-gray: #f8f9fa;
+    --text-color: #333;
+    --font-primary: 'Helvetica Neue', Arial, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    background-color: var(--yovoy-gray);
+}
+
+
+/* =============================== */
+
+
+/* ========= Navbar y Footer ===== */
+
+
+/* =============================== */
+
+.navbar {
+    padding: 1rem 0;
+}
+
+.logo-navbar {
+    height: 40px;
+    width: auto;
+    object-fit: contain;
+}
+
+.navbar-brand span {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.footer {
+    background-color: var(--yovoy-main);
+    padding: 0.75rem 0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer small {
+    color: #fff;
+    font-size: 0.9rem;
+}
+
+
+/* =============================== */
+
+
+/* ========= Encabezado ========= */
+
+
+/* =============================== */
+
+header {
+    background: #fff;
+    padding: 2rem 0;
+    border-bottom: 2px solid var(--yovoy-main);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: var(--yovoy-main);
+}
+
+header p {
+    font-size: 1.125rem;
+    color: var(--text-color);
+}
+
+
+/* =============================== */
+
+
+/* ====== Contenedor del Form ===== */
+
+
+/* =============================== */
+
+main {
+    padding: 2rem 0;
+}
+
+.card {
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.card-body {
+    padding: 2rem;
+    background: #fff;
+}
+
+section h4 {
+    font-size: 1.5rem;
+    color: var(--yovoy-main);
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+
+/* =============================== */
+
+
+/* ========= Formularios ========= */
+
+
+/* =============================== */
+
+.form-label {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+input.form-control,
+select.form-select,
+textarea.form-control {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 0.75rem;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+input.form-control:focus,
+select.form-select:focus,
+textarea.form-control:focus {
+    border-color: var(--yovoy-main);
+    outline: none;
+}
+
+.invalid-feedback {
+    font-size: 0.875rem;
+    color: var(--yovoy-orange);
+    display: none;
+}
+
+input:invalid~.invalid-feedback,
+select:invalid~.invalid-feedback,
+textarea:invalid~.invalid-feedback {
+    display: block;
+}
+
+
+/* =============================== */
+
+
+/* ===== Botones y Estados ======= */
+
+
+/* =============================== */
+
+.btn-yovoy {
+    background-color: var(--yovoy-main);
+    color: #fff;
+    border: none;
+    padding: 0.75rem;
+    font-size: 1.125rem;
+    border-radius: 4px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-yovoy:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+
+/* =============================== */
+
+
+/* ========= Animaciones ========= */
+
+
+/* =============================== */
+
+@keyframes successHighlight {
+    0% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: rgba(60, 21, 120, 0.2);
+    }
+    100% {
+        background-color: transparent;
+    }
+}
+
+.report-success {
+    animation: successHighlight 1.5s ease-in-out;
+}
+
+
+/* =============================== */
+
+
+/* ======== Estructura Grid ====== */
+
+
+/* =============================== */
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin: -0.5rem;
+}
+
+.col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0.5rem;
+}
+
+@media (max-width: 768px) {
+    .col-md-6 {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+
+/* =============================== */
+
+
+/* ====== Espaciados y Utilidades ====== */
+
+
+/* =============================== */
+
+.mb-3 {
+    margin-bottom: 1rem !important;
+}
+
+.mb-4 {
+    margin-bottom: 1.5rem !important;
+}
+
+.mt-2 {
+    margin-top: 0.5rem !important;
+}
+
+.mt-4 {
+    margin-top: 1.5rem !important;
+}
+
+.my-5 {
+    margin: 3rem 0 !important;
+}
+
+.p-3 {
+    padding: 1rem !important;
+}
+
+.p-2 {
+    padding: 0.5rem !important;
+}
+
+
+/* =============================== */
+
+
+/* ===== Estilos de Secciones ===== */
+
+
+/* =============================== */
+
+section {
+    margin-bottom: 2rem;
+}
+
+
+/* =============================== */
+
+
+/* ========= Estilos Extras ====== */
+
+
+/* =============================== */
+
+input[type="date"],
+input[type="time"] {
+    background: #fff;
+}
+
+textarea {
+    resize: vertical;
+}
+
+
+/* Animación de entrada para secciones */
+
+section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s forwards;
+    animation-delay: 0.3s;
+}
+
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =============================== */
+
+
+/* ===== Estilos para Labels y Help ===== */
+
+
+/* =============================== */
+
+label {
+    margin-bottom: 0.25rem;
+    color: var(--text-color);
+}
+
+small {
+    color: #666;
+}
+
+
+/* =============================== */
+
+
+/* ===== Estilos para Inputs y Selects ===== */
+
+
+/* =============================== */
+
+input.form-control:hover,
+select.form-select:hover,
+textarea.form-control:hover {
+    border-color: var(--yovoy-secondary);
+}
+
+
+/* =============================== */
+
+
+/* ========= Otras Utilidades ====== */
+
+
+/* =============================== */
+
+.text-yovoy {
+    color: var(--yovoy-main);
+}
+
+.text-muted {
+    color: #777;
+}
+
+.fw-bold {
+    font-weight: 700;
+}
+
+
+/* =============================== */
+
+
+/* ========= Footer Responsivo ====== */
+
+
+/* =============================== */
+
+@media (max-width: 576px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    .navbar-brand span {
+        font-size: 1.2rem;
+    }
+}
+
+
+/* =============================== */
+
+
+/* ============ Más de 200 líneas ============ */
+
+
+/* =============================== */
+
+.section-divider {
+    margin: 2rem 0;
+    border-top: 1px solid #ddd;
+}
+
+.info-text {
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.shadow-custom {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.rounded-custom {
+    border-radius: 8px;
+}
+
+.padding-custom {
+    padding: 1.5rem;
+}
+
+.margin-custom {
+    margin: 1.5rem 0;
+}
+
+
+/* Fin de los estilos extras para extender el archivo */
