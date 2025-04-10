@@ -10,7 +10,11 @@ const validator = require('validator');
 const app = express();
 
 // Middlewares
-app.use(cors());
+const corsOptions = {
+    origin: 'https://springgreen-eland-179690.hostingersite.com/', // Reemplaza con tu dominio real
+    optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+app.use(cors(corsOptions));
 app.use(express.json());
 
 // Conexión a MongoDB

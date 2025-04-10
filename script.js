@@ -66,7 +66,7 @@ if (registerForm) {
         }
 
         try {
-            const response = await fetch('http://localhost:3000/api/register', {
+            const response = await fetch('https://encuentra-tu-ruta.onrender.com/api/register', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ name, lastName, phone, email, password }),
@@ -100,7 +100,7 @@ if (loginForm) {
         const password = document.getElementById('loginPassword').value.trim();
 
         try {
-            const response = await fetch('http://localhost:3000/api/login', {
+            const response = await fetch('https://encuentra-tu-ruta.onrender.com/api/login', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({ emailOrPhone, password }),
@@ -133,7 +133,7 @@ if (window.location.pathname.endsWith('home.html')) {
                 window.location.href = 'login.html';
             });
     } else {
-        fetch('http://localhost:3000/api/protegido', {
+        fetch('https://encuentra-tu-ruta.onrender.com/api/protegido', {
                 method: 'GET',
                 headers: { Authorization: `Bearer ${token}` },
             })
